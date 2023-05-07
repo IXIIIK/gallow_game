@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "gallows-game"
+version = "0.1.0"
+description = ""
+authors = ["ilya sinitsyn <baner1337228@gmail.com>"]
+readme = "README.md"
+packages = [{include = "gallows_game"}]
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+bs4 = "^0.0.1"
+prompt = "^0.4.1"
+requests = "^2.28.2"
+
+[tool.poetry.scripts]
+gallows-game = 'main:main'
+words = 'words:main'
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
