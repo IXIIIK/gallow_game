@@ -5,7 +5,6 @@ import random
 WORD = random.choice(words('../russian-words/russian.utf-8'))
 
 
-
 def correct_word():
     visible_word = WORD
     invisible_word = visible_word
@@ -20,7 +19,8 @@ def gallow():
     invisible_word = list(invisible_word)
 
     while live != 0:
-        print('\n', ''.join(invisible_word))
+        print(lives_visual_dict[live])
+        print('\n\t\t', ''.join(invisible_word))
         print(f'\nИспользованные буквы: {user_word}')
         usr_answer = input('Ваша буква: ')
         index = [i for i, c in enumerate(visible_word) if c == usr_answer.lower()]
@@ -34,7 +34,6 @@ def gallow():
         else: 
             live -= 1
             user_word += usr_answer
-            print(lives_visual_dict[live])
             print(f'Не правильно. Жизней осталось: {live}')
     print(f'\nВы проиграли. Правельное слово: {visible_word}\n')
 
